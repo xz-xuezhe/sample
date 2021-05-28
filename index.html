@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>文件预览</title>
+</head>
+
+<body style="margin: 0;">
+    <iframe id="ver" src="pdfjs/web/viewer.html?file=/hello.pdf" frameborder="0" style="width: 100vw; height:100vh;"></iframe>
+</body>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+        $('#ver').load(function(){
+            $('#ver').contents().find('body').find('#secondaryToolbarToggle').hide();
+            $('#ver').contents().find('body').find('#viewFind').hide();
+            $('#ver').contents().find('body').find('#sidebarToggle').hide();
+        });
+    </script>
+</html>
